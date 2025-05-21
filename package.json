@@ -1,5 +1,5 @@
 {
-  "name": "issue-tracker",
+  "name": "viggeiFruits-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,8 @@
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tslint": "^5.20.1"
+    "tslint": "^5.20.1",
+    "viggeiFruits-frontend": "file:"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -42,8 +43,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint",
-      "pre-push": "yarn build"
+      "pre-commit": "npm lint",
+      "pre-push": "npm build"
     }
   },
   "config": {
