@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import { Outfit} from "next/font/google";
+import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
+import { ContextProvider } from "./context/ContextProvider";
 import "./globals.css";
-import { Theme, ThemePanel } from "@radix-ui/themes";
 
 const outfit = Outfit({
   variable: "--font-Outfit",
@@ -25,7 +26,9 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         	<Theme accentColor="lime" grayColor="olive" appearance="dark">
-        {children}
+            <ContextProvider>
+             {children}
+            </ContextProvider>
           </Theme>
       </body>
     </html>
