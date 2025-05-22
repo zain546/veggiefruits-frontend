@@ -11,11 +11,13 @@
     "commit": "cz"
   },
   "dependencies": {
+    "@radix-ui/themes": "^3.2.1",
     "@tailwindcss/postcss": "^4.1.4",
     "issue-tracker": "file:",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
     "tslint": "^5.20.1",
     "viggeiFruits-frontend": "file:"
   },

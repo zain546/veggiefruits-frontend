@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist as Inter, Geist_Mono } from "next/font/google";
+import { Outfit} from "next/font/google";
+import "@radix-ui/themes/styles.css";
 import "./globals.css";
+import { Theme, ThemePanel } from "@radix-ui/themes";
 
-const geistSans = Inter({
-  variable: "--font-Inter",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
+  variable: "--font-Outfit",
   subsets: ["latin"],
 });
 
@@ -25,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} antialiased`}
       >
+        	<Theme accentColor="lime" grayColor="olive" appearance="dark">
         {children}
+          </Theme>
       </body>
     </html>
   );
